@@ -1,0 +1,177 @@
+%% -*- coding: utf-8; -*-
+
+%% \listfiles
+
+\documentclass[
+  mestrado,
+  brazil
+]{ThesisPUC}
+
+  %% \usepackage[brazilian]{babel}      %% in ThesisPUC.cls
+  %% \usepackage[utf8]{inputenc}        %% .
+  %% \usepackage[T1]{fontenc}           %% .
+  %% \usepackage{lmodern}               %% .
+  %% \usepackage[pdftex]{graphicx}	%% .
+
+  \usepackage{tabularx}
+  \usepackage{multirow}
+  \usepackage{multicol}
+  \usepackage{colortbl}
+  \usepackage[%
+    dvipsnames,
+    svgnames,
+    x11names,
+    fixpdftex
+  ]{xcolor}
+  \usepackage{numprint}
+  \usepackage{textcomp}
+  \usepackage{booktabs}
+  \usepackage{amsmath}
+  \usepackage{enumitem}
+  \usepackage{amssymb}
+  \usepackage{textcomp}
+
+
+
+%%% Other commands
+
+\newcommand{\Rset}{\mathbb{R}}
+\newcommand{\Zset}{\mathbb{Z}}
+
+\npthousandsep{}
+\npdecimalsign{,}
+
+\modotabelas{figtab} %% [nada, fig, tab ou figtab]
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+
+%%%
+%%% My files
+%%%
+
+\input{defs}
+
+
+%%%
+%%% Titulos
+%%%
+
+\tituloglossario{Lista de Abreviaturas}
+
+\autor{Rodrigo Leite da Silva}
+\autorR{Leite da Silva, Rodrigo}
+
+\orientador{Edward Hermann Haeusler}{Prof.}
+\orientadorR{Hermann Haeusler, Edward}
+
+%\coorientador{}{}
+%\coorientadorR{}
+%\coorientadorInst{}{}
+
+\titulo{Título}
+
+%% \subtitulo{Subtitulo}
+
+\dia{dia}
+\mes{mes}
+\ano{ano}
+
+\cidade{Rio de Janeiro}
+\CDD{620.11}
+\departamento{Informática}
+\programa{Engenharia de Computação}
+\centro{Centro Técnico Científico}
+\universidade{Pontifícia Universidade Católica do Rio de Janeiro}
+\uni{PUC-Rio}
+
+
+%%%
+%%% Banca
+%%%
+
+\banca{%
+%  \membrodabanca{Nome}{Prof.}
+%    {Pontifícia Universidade Católica do Rio de Janeiro}{PUC-Rio}
+%  \membrodabanca{Nome}{Prof.}
+%    {Pontifícia Universidade Católica do Rio de Janeiro}{PUC-Rio}
+}
+
+
+%%%
+%%% Currículo
+%%%
+
+\curriculo{}
+
+
+
+%%%
+%%% Agradecimentos
+%%%
+
+\agradecimentos{}
+
+
+%%%
+%%% Prechaves
+%%%
+
+\catalogprekeywords{%
+  \catalogprekey{}%
+}
+
+
+%%%
+%%% Chaves
+%%%
+
+\chaves{%
+  \chave{}
+}
+
+
+%%%
+%%% Resumo
+%%%
+
+\resumo{}
+
+
+%%%
+%%% Epigrafe
+%%%
+
+%% \epigrafe{%
+%%   no epigrafe}
+%% \epigrafeautor{}
+%% \epigrafelivro{}
+
+
+%%%
+%%% Misc.
+%%%
+
+\usecolour{true}
+
+
+%%%
+%%% 
+%%%
+
+
+\begin{document}
+
+\selectlanguage{brazilian}
+
+%%%
+%%% Texto do Relatório
+%%%
+
+
+\arial
+\bibliography{bibliografia}
+\normalfont
+
+\end{document}
