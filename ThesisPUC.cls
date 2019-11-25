@@ -830,7 +830,7 @@ Centro Técnico Científico}}
     \puc@rightmargin{\Large \arial
       \textbf{\ifthenelse{\boolean{puc@phd}}%
         {TESE DE DOUTORADO}%
-        {RELATÓRIO DE PROJETO FINAL}}}%
+        {RELATÓRIO DE PROJETO FINAL I}}}%
     \vspace*{\stretch{1.5}}%
     \par%
     \puc@rightmargin{\textbf{DEPARTAMENTO DE \MakeUppercase{\puc@department}}}%
@@ -893,7 +893,7 @@ Centro Técnico Científico}}
   \par%
   \puc@rightmargin{\arial \textbf{\ifthenelse{\boolean{puc@phd}}
       {Tese de Doutorado}
-      {Relatório de Projeto Final}}}%
+      {Relatório de Projeto Final I}}}%
   \vspace*{\stretch{1.5}}%
   \par%
   \puc@leftmargin{\arial%
