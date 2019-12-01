@@ -2,11 +2,44 @@
 
 \newcommand{\degree}{\ensuremath{^\circ}}
 
-\newcommand{\cetem}{Centro de Tecnologia Mineral}
+\newcommand{\myworries}[1]{\textcolor{red}{#1}}
+%\renewcommand\myworries[1]{}
 
-%\newcommand{\cetem@ini}{CETEM}
-%\newcommand{\ini}[1]{\renewcommand{\cetem@ini}{#1}}
-\newcommand{\CETEM}{CETEM}
+\newcommand{\tam}{Transcrição Automática de Música}
+\newcommand{\TAM}{TAM}
+
+\newcommand{\hmm}{Hidden Markov Model }
+\newcommand{\HMM}{HMM}
+
+\newcommand{\mir}{Music Information Retreival}
+\newcommand{\MIR}{MIR}
+
+\newcommand{\ca}{\emph{clave de articulação} }
+\newcommand{\CA}{\emph{designação nominativa} }
+
+
+\newcommand{\cronogramaoriginal}{
+\begin{adjustbox}{max width=\textwidth}
+\begin{table}[]
+\begin{tabular}{@{}llllllllll@{}}
+\toprule
+Atividade & Out & Nov & Dez & Jan & Fev & Mar & Abr & Mai & Jun \\ \midrule
+\multicolumn{1}{|l|}{Estudo de tecnologias para interpretação de sinais.} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \midrule
+\multicolumn{1}{|l|}{Criar dados de teste: notas individuais} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \midrule
+\multicolumn{1}{|l|}{Criar dados de teste: Conjuntos de notas formando um ritmo} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \midrule
+\multicolumn{1}{|l|}{Estudo de tecnologias para interpretação rítmica} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \midrule
+\multicolumn{1}{|l|}{Estudo de representações de partituras.} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \midrule
+\multicolumn{1}{|l|}{Implementação da interpretação de sinais} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \midrule
+\multicolumn{1}{|l|}{Testes da interpretação de sinais} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \midrule
+\multicolumn{1}{|l|}{Implementação da escrita de partitura.} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \midrule
+\multicolumn{1}{|l|}{Testes da interpretação rítmica} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \midrule
+\multicolumn{1}{|l|}{Implementação da escrita de partitura.} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} \\ \midrule
+\multicolumn{1}{|l|}{Testes da escrita de partitura} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} \\ \midrule
+Testes da integração do sistema. &  &  &  &  &  &  &  & \cellcolor[HTML]{656565} & \cellcolor[HTML]{656565} \\ \bottomrule
+\end{tabular}
+\end{table}
+\end{adjustbox}
+}
 
 
 %%%
