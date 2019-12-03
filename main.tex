@@ -26,6 +26,7 @@
   \usepackage{numprint}
   \usepackage{textcomp}
   \usepackage{booktabs}
+  \usepackage[final]{pdfpages}
   
   %pacotes para as tabelas
   \usepackage[table,xcdraw]{xcolor}
@@ -253,7 +254,12 @@ Essentia tem uma implementação da Rhythm Transform, entretanto, no manual do a
 
 \subsection{A partitura resultante}
 Por ser um instrumento não-harmônico, a notação típica em pentagramas (cinco linhas), onde a posição da nota reflete a frequência do som emitido pelo instrumento, não é útil. Seuguirei então o trabalho de Magalhães \cite{magalhaes2018tecnica}, que definiu uma \CA (ou \ca) para o pandeiro brasileiro, ou seja, um indicador do que cada linha e espaço significa. Isso reduz a quantidade de linhas necessárias de cinco (pentagrama) para duas (bigramas). Então usaremos a mesma \ca que Magalhães e as 9 notas do pandeiro como definido por ela.
-\myworries{Tenho que escanear uma imagem da \ca}
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{ClaveDeArticulacao.jpg}
+    \caption{Clave de articulação usada nas partituras}
+    \label{fig:clave}
+\end{figure}
 
 
 \chapter{Revisão do Plano de Ação}
@@ -271,20 +277,16 @@ Isso foi deliberado durante o decorrer da pesquisa, pois notamos que montar conj
 A diversidade de pandeiros, com tamanhos e materiais diferentes, é muito grande. 
 Portanto, para a coleta de dados suficentes para ensinarmos uma máquina a aprender a reconhecer \emph{qualquer} pandeiro, precisaríamos de mais tempo do que o cronograma permite. 
 
-Vamos limitar, então, o escopo do conjunto de dados de toques do pandeiro para apenas um instrumento: Um pandeiro de 11 polegadas, membrana de couro de \myworries{? estou esperando resposta do lutier que botou a pele} e platinelas de latão.
+Vamos limitar, então, o escopo do conjunto de dados de toques do pandeiro para apenas um instrumento: Um pandeiro de 11 polegadas, membrana de couro de cabra e platinelas de latão.
 E julgamos que o conjunto de dados de várias notas formando um ritmo não será necessário. Não usaremos aprendizado de máquina para a etapa de identificação de ritmos.
 
 
 \chapter{Cronogramas}
-\section{Cronograma de estudo, projeto e desenvolvimento no Projeto Final I}
-\begin{itemize}
-    \item Cronograma planejado
-    \myworries{estou com problema de adicionar a tabela: \backslash cronogramaoriginal}
-    
-    \item cronograma real
-\end{itemize}
-\section{Cronograma para desenvolvimento no Projeto Final II}
-
+\includepdf[pages=-,pagecommand={}]{CronogramasReal.pdf}
+\caption{Cronograma Planejado}
+%\myworries{estou com problema de adicionar a tabela: \backslash cronogramaoriginal}
+\includepdf[pages=-,pagecommand={}]{CronogramasFinal.pdf}
+\caption{Cronograma para desenvolvimento no Projeto Final II}
 
 \arial
 \bibliography{bibliografia}
