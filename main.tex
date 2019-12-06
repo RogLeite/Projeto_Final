@@ -233,8 +233,8 @@ Algumas particularidades do instrumento em questão, que estão sendo considerad
     \item Por ser sustentado com uma mão e atacado com outra, não ocorrem toques simultâneos. As soalhas (platinelas) soam em todos os toques, mas os toques agudos podem ser caracterizados pela ausência de um ataque na pele.
 \end{itemize}
 
-\subsection{Segmentação e Extração de Features \myworries{(esqueci a tradução de features)}}
-Vou usar a biblioteca Essentia para encontrar o \emph{onset} dos toques e extrair features do sinal para a tarefa de reconhecer os toques.
+\subsection{Segmentação e Extração de \emph{Features}}
+Vou usar a biblioteca Essentia para encontrar o \emph{onset} dos toques e extrair \emph{features} do sinal para a tarefa de reconhecer os toques.
 
 \subsection{Reconhecimento dos Toques}
 Pela falta de um conjunto de dados rotulados de toques de pandeiro, optamos por usar aprendizado de máquina não-supervisionado. Para essa tarefa de classificação de toques, algoritmos de agrupamento são os mais apropriados, e a biblioteca Scikit-Learn oferece implementações de vários desses \cite{scikit2019Clustering}.
@@ -278,13 +278,15 @@ Portanto, para a coleta de dados suficentes para ensinarmos uma máquina a apren
 Vamos limitar, então, o escopo do conjunto de dados de toques do pandeiro para apenas um instrumento: Um pandeiro de 11 polegadas, membrana de couro de cabra e platinelas de latão.
 E julgamos que o conjunto de dados de várias notas formando um ritmo não será necessário. Não usaremos aprendizado de máquina para a etapa de identificação de ritmos.
 
+\cronogramaoriginal
+%\begin{wrapfigure}
+%\includepdf{CronogramasReal.pdf}
+%\end{wrapfigure}
 
-\chapter{Cronogramas}
-\includepdf[pages=-,pagecommand={}]{CronogramasReal.pdf}
-\caption{Cronograma Planejado}
-%\myworries{estou com problema de adicionar a tabela: \backslash cronogramaoriginal}
-\includepdf[pages=-,pagecommand={}]{CronogramasFinal.pdf}
-\caption{Cronograma para desenvolvimento no Projeto Final II}
+\cronogramanovo
+%\begin{wrapfigure}
+%\includepdf{CronogramasFinal.pdf}
+%\end{wrapfigure}
 
 \arial
 \bibliography{bibliografia}

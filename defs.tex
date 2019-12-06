@@ -19,26 +19,63 @@
 
 
 \newcommand{\cronogramaoriginal}{
-\begin{adjustbox}{max width=\textwidth}
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
 \begin{table}[]
-\begin{tabular}{@{}llllllllll@{}}
-\toprule
-Atividade & Out & Nov & Dez & Jan & Fev & Mar & Abr & Mai & Jun \\ \midrule
-\multicolumn{1}{|l|}{Estudo de tecnologias para interpretação de sinais.} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \midrule
-\multicolumn{1}{|l|}{Criar dados de teste: notas individuais} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \midrule
-\multicolumn{1}{|l|}{Criar dados de teste: Conjuntos de notas formando um ritmo} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \midrule
-\multicolumn{1}{|l|}{Estudo de tecnologias para interpretação rítmica} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \midrule
-\multicolumn{1}{|l|}{Estudo de representações de partituras.} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \midrule
-\multicolumn{1}{|l|}{Implementação da interpretação de sinais} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \midrule
-\multicolumn{1}{|l|}{Testes da interpretação de sinais} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \midrule
-\multicolumn{1}{|l|}{Implementação da escrita de partitura.} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \midrule
-\multicolumn{1}{|l|}{Testes da interpretação rítmica} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \midrule
-\multicolumn{1}{|l|}{Implementação da escrita de partitura.} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} \\ \midrule
-\multicolumn{1}{|l|}{Testes da escrita de partitura} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{656565}} & \multicolumn{1}{l|}{} \\ \midrule
-Testes da integração do sistema. &  &  &  &  &  &  &  & \cellcolor[HTML]{656565} & \cellcolor[HTML]{656565} \\ \bottomrule
+\begin{tabular}{|p{5cm}|l|l|l|l|l|l|l|l|l|}
+\hline
+Atividade & Out & Nov & Dez & Jan & Fev & Mar & Abr & Mai & Jun \\ \hline
+Estudo de tecnologias para interpretação de sinais. & \cellcolor[HTML]{C0C0C0}P &  &  &  &  &  &  &  &  \\
+ & \cellcolor[HTML]{34FF34}R & \cellcolor[HTML]{34FF34}R &  &  &  &  &  &  &  \\ \hline
+Criar dados de teste: notas individuais &  & \cellcolor[HTML]{C0C0C0}P & \cellcolor[HTML]{C0C0C0}P & \cellcolor[HTML]{C0C0C0}P &  &  &  &  &  \\
+ &  & \cellcolor[HTML]{FE0000}N & \cellcolor[HTML]{FE0000}N & \cellcolor[HTML]{C0C0C0}P &  &  &  &  &  \\ \hline
+Criar dados de teste: Conjuntos de notas formando um ritmo &  &  &  & \cellcolor[HTML]{C0C0C0}P & \cellcolor[HTML]{C0C0C0}P & \cellcolor[HTML]{C0C0C0}P &  &  &  \\
+ &  &  &  & \cellcolor[HTML]{C0C0C0}P & \cellcolor[HTML]{C0C0C0}P & \cellcolor[HTML]{C0C0C0}P &  &  &  \\ \hline
+Estudo de tecnologias para interpretação rítmica &  & \cellcolor[HTML]{C0C0C0}P &  &  &  &  &  &  &  \\
+ &  & \cellcolor[HTML]{34FF34}R & \cellcolor[HTML]{34FF34}R &  &  &  &  &  &  \\ \hline
+Estudo de representações de partituras. &  &  & \cellcolor[HTML]{C0C0C0}P &  &  &  &  &  &  \\
+ &  & \cellcolor[HTML]{34FF34}R & \cellcolor[HTML]{34FF34}R &  &  &  &  &  &  \\ \hline
+Implementação da interpretação de sinais &  &  & \cellcolor[HTML]{C0C0C0}P & \cellcolor[HTML]{C0C0C0}P &  &  &  &  &  \\
+ &  &  & \cellcolor[HTML]{FE0000}N & \cellcolor[HTML]{C0C0C0}P &  &  &  &  &  \\ \hline
+Testes da interpretação de sinais &  &  &  & \cellcolor[HTML]{C0C0C0}P &  &  &  &  &  \\
+ &  &  &  & \cellcolor[HTML]{C0C0C0}P &  &  &  &  &  \\ \hline
+Implementação da interpretação rítmica &  &  &  &  & \cellcolor[HTML]{C0C0C0}P & \cellcolor[HTML]{C0C0C0}P &  &  &  \\
+ &  &  &  &  & \cellcolor[HTML]{C0C0C0}P & \cellcolor[HTML]{C0C0C0}P &  &  &  \\ \hline
+Testes da interpretação rítmica &  &  &  &  &  & \cellcolor[HTML]{C0C0C0}P &  &  &  \\
+ &  &  &  &  &  & \cellcolor[HTML]{C0C0C0}P &  &  &  \\ \hline
+Implementação da escrita de partitura. &  &  &  &  &  &  & \cellcolor[HTML]{C0C0C0}P & \cellcolor[HTML]{C0C0C0}P &  \\
+ &  &  &  &  &  &  & \cellcolor[HTML]{C0C0C0}P & \cellcolor[HTML]{C0C0C0}P &  \\ \hline
+Testes da escrita de partitura &  &  &  &  &  &  &  & \cellcolor[HTML]{C0C0C0}P &  \\
+ &  &  &  &  &  &  &  & \cellcolor[HTML]{C0C0C0}P &  \\ \hline
+Testes da integração do sistema. &  &  &  &  &  &  &  & \cellcolor[HTML]{C0C0C0}P & \cellcolor[HTML]{C0C0C0}P \\
+ &  &  &  &  &  &  &  & \cellcolor[HTML]{C0C0C0}P & \cellcolor[HTML]{C0C0C0}P \\ \hline
 \end{tabular}
+\caption{Cronograma Planejado/Realizado}
 \end{table}
-\end{adjustbox}
+}
+
+\newcommand{\cronogramanovo}
+{
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[width=\textwidth]
+\begin{tabular}{|l|lllllll}
+\hline
+Atividade & \multicolumn{1}{l|}{Dez} & \multicolumn{1}{l|}{Jan} & \multicolumn{1}{l|}{Fev} & \multicolumn{1}{l|}{Mar} & \multicolumn{1}{l|}{Abr} & \multicolumn{1}{l|}{Mai} & \multicolumn{1}{l|}{Jun} \\ \hline
+Criar dados de teste: notas individuais & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}P} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}P} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \hline
+Implementação da interpretação de sinais & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}P} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}P} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \hline
+Testes da interpretação de sinais & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}P} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \hline
+Implementação da interpretação rítmica & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}P} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}P} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}P} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \hline
+Testes da interpretação rítmica & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}P} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}P} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \hline
+Implementação da escrita de partitura. & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}P} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}P} & \multicolumn{1}{l|}{} \\ \hline
+Testes da escrita de partitura & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}P} & \multicolumn{1}{l|}{} \\ \hline
+Testes da integração do sistema. & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}P} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}P} \\ \hline
+\cellcolor[HTML]{C0C0C0}P - Planejado &  &  &  &  &  &  &  \\ \cline{1-1}
+\end{tabular}
+\caption{Cronograma para desenvolvimento no Projeto Final II}
+\end{table}
 }
 
 
