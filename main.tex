@@ -183,28 +183,39 @@ Para sinais monofônicos (i.e.: um único instrumento) o problema é considerado
 
 Na cultura brasileira, instrumentos percussivos são tão variados quanto ubíquos, graças ao sincretismo das culturas indígenas, africanas e européias. E, dentre esses instrumentos, o pandeiro tem uma versatilidade enorme, sendo normalmente usado do choro a MPB, mas com potencial em qualquer ritmo, graças à variedade de timbres que dele podemos extrair \cite{magalhaes2016pandeiro}. Essa variedade de abordagens, pareada com o baixo custo e portabilidade do instrumento, torna-o um ótimo ponto de entrada para o mundo da percussão. 
 
-Visando aproximar os trabalhos já realizados de \TAM \space para o contexto musical brasileiro propomos, nessa monografia, um sistema que faça a transcrição automática do pandeiro para uma partitura pautada.
+Visando aproximar os trabalhos já realizados de \TAM\space para o contexto musical brasileiro propomos, nessa monografia, um sistema que faça a transcrição automática do pandeiro para uma partitura pautada.
 
 
 \section{Ambiente Computacional}
-A linguagem escolhida para implementação do sistema proposto foi Python \cite{van2011python}, por ter a maior variedade de bibliotecas de \mir \space (daqui em diante \MIR).
+A linguagem escolhida para implementação do sistema proposto foi Python \cite{van2011python}, por ter a maior variedade de bibliotecas de \mir\space (daqui em diante \MIR).
 
 Querendo que o desempenho do editor não dependa da máquina onde o autor se encontra escolhemos, para desenvolvimento em Python, o Google Colab, um ambiente Jupyter Notebook \cite{kluyver2016jupyter}, para criação e edição de documentos que mesclam texto e código interativo. O Colab roda completamente na nuvem eliminando a necessidade da configuração de um ambiente local. A natureza interativa dos documentos criados facilitam a reprodução do trabalho e a iteração ágil no desenvolvimento de trechos de código.
 
-Foi escolhida Essentia como a biblioteca de \MIR \space para nosso sistema ao invés da LibROSA, pois dispõe dos modos \emph{standard}, onde podemos testar algoritmos rapidamente, e \emph{streaming}, onde podemos declarar um novo algoritmo como uma rede de outros algoritmos, facilitando a declaração de uma arquitetura para nosso sistema. Essentia também dispõe de muitos tutoriais para suas funcionalidades em formato Jupyter Notebook (.ipynb), facilitando seu aprendizado.
+Foi escolhida Essentia como a biblioteca de \MIR\space para nosso sistema ao invés da LibROSA, pois dispõe dos modos \emph{standard}, onde podemos testar algoritmos rapidamente, e \emph{streaming}, onde podemos declarar um novo algoritmo como uma rede de outros algoritmos, facilitando a declaração de uma arquitetura para nosso sistema. Essentia também dispõe de muitos tutoriais para suas funcionalidades em formato Jupyter Notebook (.ipynb), facilitando seu aprendizado.
 
 \chapter{Situação Atual}
 
-Encontramos os seguintes trabalhos focados na \TAM \space monofônicas de percussão não-harmônica. Schloss \cite{schloss1986automatic} construiu um sistema capaz de transcrever improvisos numa Conga para uma partitura pautada modificada. Para a Tabla, um instrumento do norte da Índia, Chordia \cite{chordia2005segmentation} implementou um sistema que segmenta um áudio do instrumento em suas notas e as classifica, enquanto Gillet e Richard \cite{gillet2003automatic} fizeram um ambiente inteiro (Tablascope) que permite a transcrição automática em tempo real para notação de Tabla, edição de frases, anotação de áudio, além de outras funcionalidades. Sillanpää \cite{sillanpaa2000drum} trabalhou sobre a bateria, com o objetivo de identificar até três toques simultâneos. Anantapadmanabhan, Bellur e Murthy \cite{anantapadmanabhan2013modal} analisaram os toques do Mridangam, um instrumento do sul da Índia, e estenderam a análise para ensinar um \hmm \space (\HMM) a transcrever o instrumento. 
+Encontramos os seguintes trabalhos focados na \TAM\space monofônicas de percussão não-harmônica. Schloss \cite{schloss1986automatic} construiu um sistema capaz de transcrever improvisos numa Conga para uma partitura pautada modificada. Para a Tabla, um instrumento do norte da Índia composto por dois tambores, Chordia \cite{chordia2005segmentation} implementou um sistema que segmenta um áudio do instrumento em suas notas e as classifica, enquanto Gillet e Richard \cite{gillet2003automatic} fizeram um ambiente inteiro (Tablascope) que permite a transcrição automática em tempo real para notação de Tabla, edição de frases, anotação de áudio, além de outras funcionalidades. Sillanpää \cite{sillanpaa2000drum} trabalhou sobre a bateria, com o objetivo de identificar até três toques simultâneos. Anantapadmanabhan, Bellur e Murthy \cite{anantapadmanabhan2013modal} analisaram os toques do Mridangam, um instrumento do sul da Índia, e estenderam a análise para ensinar um \hmm\space (\HMM) a transcrever o instrumento.
 
-Trabalhos voltados para o aspecto rítmico de \TAM \space foram. Takeda, Nishimoto e Sagayama \cite{takeda2007rhythm} que, inspirados em trabalhos de reconhecimento de fala, treinaram um \HMM\space a reconhecer um "vocabulário rítmico" e, subsequentemente, estimaram o ritmo e andamento de uma música em formato MIDI.
-Guaus e Herrera \cite{guaus2005rhythm}, trabalhando no contexto de classificação de gênero musical, definiram e implementaram uma "Transformada Rítmica". Essa transformada serve para representar de maneira genérica o ritmo da música, análogo a como a Transformada de Fourrier representa timbre.
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth/2]{conga.jpg}
+    \caption{A Conga}
+    \label{fig:conga}
+    \centering
+    \includegraphics[width=\textwidth/2]{indian-tabla.jpg}
+    \caption{Esse par de tambores é o Tabla}
+    \label{fig:tabla}
+\end{figure}
+
+Encontramos os seguintes trabalhos voltados exclusivamente para o aspecto rítmico de \TAM. Takeda, Nishimoto e Sagayama \cite{takeda2007rhythm} que, inspirados em trabalhos de reconhecimento de fala, treinaram um \HMM\space a reconhecer um "vocabulário rítmico" e, subsequentemente, estimaram o ritmo e andamento de uma música em formato MIDI.
+Guaus e Herrera \cite{guaus2005rhythm}, trabalhando no contexto de classificação de gênero musical, definiram e implementaram uma "Transformada Rítmica". Essa transformada serve para representar de maneira genérica o ritmo da música, análogo a como a Transformada de Fourrier representa timbre \myworries{explicar melhor}.
 
 
 \section{Tecnologias Existentes}
 Essentia \cite{bogdanov2013essentia}, LibROSA \cite{mcfee2015librosaDesign} e mir\_eval \cite{raffel2014mir_eval} são bibliotecas desenvolvidas para \MIR. Essentia, escrito em C++ com envoltório em Python, fornece diversos algoritmos de análise de sinal em dois modos: \emph{standard} e \emph{streaming}, usados de modo imperativo e declarativo, respectivamente. LibROSA, foi escrito em Python e fornece análises de sinais musicais tanto de baixo nível (onsets, andamento) quanto de alto nível (estrutura da música). mir\_eval, por sua vez, fornece medidas de desempenho para diversas tarefas de \MIR.
 
-music21 \cite{cuthbert2010music21}, é uma biblioteca desenvolvida analisar e sintetizar músicas, através de suas representações (i.e. partituras).
+Music21 \cite{cuthbert2010music21}, é uma biblioteca desenvolvida analisar e sintetizar músicas, através de suas representações (i.e. partituras).
 
 MusicXML \cite{good2001musicxml} é um formato de arquivo que se propõe a ser o formato que representa a notação musical ocidental de maneira intercambiável entre aplicações de notação musical, análise musical etc.
 
@@ -212,6 +223,7 @@ MusicXML \cite{good2001musicxml} é um formato de arquivo que se propõe a ser o
 \begin{itemize}
     \item Andamento: O pulso regular, medido em batidas por minuto, que guia a música.
     \item Ritmo: Como os toques estão organizados dentro do andamento.
+    \item \myworries{mir}
 \end{itemize}
 
 
@@ -221,9 +233,9 @@ A proposta do projeto é implementar um sistema que receba um arquivo de áudio 
 
 Para cada uma dessas etapas, estudamos tecnologias que já foram usadas em outros trabalhos, avaliando suas respectivas viabilidades para projeto proposto. Encontramos bibliotecas que atendem aos requisitos de cada uma das etapas. Todas elas usadas em Python. 
 
-Queremos atender a qualquer usuário com um pandeiro, microfone e editor de partituras. Uma interface gráfica não está prevista no projeto mas a partitura resultante do sistema deverá estar em algum formato editável por programas corriqueiros. Essa facilidade de edição é vital para que os usuários validem o resultado do sistema e corrijam quaisquer equívocos na transcrição.
+Queremos atender a qualquer usuário com um pandeiro, microfone e editor de partituras. Uma interface gráfica não está prevista no projeto mas a partitura resultante do sistema deverá estar em algum formato editável por programas disponíveis no mercado. Essa facilidade de edição é vital para que os usuários validem o resultado do sistema e corrijam quaisquer equívocos na transcrição.
 
-Durante a pesquisa, determinamos que precisaremos constuir um conjunto de dados não rotulado de toques do pandeiro. Esse conjunto será usado por algoritmos de agrupamento para encontrar grupos de toques semelhantes.
+\myworries{detalhar melhor a necessidade}Durante a pesquisa, determinamos que precisaremos constuir um conjunto de dados não rotulado de toques do pandeiro. Esse conjunto será usado por algoritmos de agrupamento para encontrar grupos de toques semelhantes.
 
 \section{O Sistema}
 \subsection{Particularidades do Pandeiro Brasileiro}
@@ -234,7 +246,7 @@ Algumas particularidades do instrumento em questão, que estão sendo considerad
 \end{itemize}
 
 \subsection{Segmentação e Extração de \emph{Features}}
-Vou usar a biblioteca Essentia para encontrar o \emph{onset} dos toques e extrair \emph{features} do sinal para a tarefa de reconhecer os toques.
+Vamos usar a biblioteca Essentia para encontrar o \emph{onset} dos toques e extrair \emph{features} do sinal para a tarefa de reconhecer os toques.
 
 \subsection{Reconhecimento dos Toques}
 Pela falta de um conjunto de dados rotulados de toques de pandeiro, optamos por usar aprendizado de máquina não-supervisionado. Para essa tarefa de classificação de toques, algoritmos de agrupamento são os mais apropriados, e a biblioteca Scikit-Learn oferece implementações de vários desses \cite{scikit2019Clustering}.
@@ -242,7 +254,7 @@ Pela falta de um conjunto de dados rotulados de toques de pandeiro, optamos por 
 Como alguns dos toques são, executados com a intenção de soarem identicos para o ouvido humano (e.g. o grave de polegar e o grave de bloco de dedos), esperamos ter dificuldade nas suas classificações.
 
 \subsection{Reconhecimento de Andamento}
-Na biblioteca Essentia já existem algoritmos de identificação da assinatura de batidas por minuto.
+Na biblioteca Essentia já existem algoritmos de identificação da assinatura de batidas por minuto a partir do sinal original.
 
 \subsection{Reconhecimento de Ritmo}
 Essentia tem uma implementação da Rhythm Transform, entretanto, no manual do algoritmo, informa que a qualidade não é garantida:
@@ -251,7 +263,7 @@ Essentia tem uma implementação da Rhythm Transform, entretanto, no manual do a
 \end{quote}
 
 \subsection{A partitura resultante}
-Por ser um instrumento não-harmônico, a notação típica em pentagramas (cinco linhas), onde a posição da nota reflete a frequência do som emitido pelo instrumento, não é útil. Seuguirei então o trabalho de Magalhães \cite{magalhaes2018tecnica}, que definiu uma \CA (ou \ca) para o pandeiro brasileiro, ou seja, um indicador do que cada linha e espaço significa. Isso reduz a quantidade de linhas necessárias de cinco (pentagrama) para duas (bigramas). Então usaremos a mesma \ca que Magalhães e as 9 notas do pandeiro como definido por ela.
+Por ser um instrumento não-harmônico, a notação típica em pentagramas (cinco linhas), onde a posição da nota reflete a frequência do som emitido pelo instrumento, não é útil. Seuguirei então o trabalho de Magalhães \myworries{que trabalho é esse?} \cite{magalhaes2018tecnica}, que definiu uma \CA (ou \ca) para o pandeiro brasileiro, ou seja, um indicador do que cada linha e espaço significa. Isso reduz a quantidade de linhas necessárias de cinco (pentagrama) para duas (bigramas). Então usaremos a mesma \ca que Magalhães e as 9 notas do pandeiro como definido por ela.
 
 A partitura será representada em formato MusicXML, que será gerado através da biblioteca music21, que disponibiliza uma função específicamente para a essa tarefa.
 
