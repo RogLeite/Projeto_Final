@@ -209,7 +209,7 @@ Encontramos os seguintes trabalhos focados na \TAM\space monofônicas de percuss
 \end{figure}
 
 Encontramos os seguintes trabalhos voltados exclusivamente para o aspecto rítmico de \TAM. Takeda, Nishimoto e Sagayama \cite{takeda2007rhythm} que, inspirados em trabalhos de reconhecimento de fala, treinaram um \HMM\space a reconhecer um "vocabulário rítmico" e, subsequentemente, estimaram o ritmo e andamento de uma música em formato MIDI.
-Guaus e Herrera \cite{guaus2005rhythm}, trabalhando no contexto de classificação de gênero musical, definiram e implementaram uma "Transformada Rítmica". Essa transformada serve para representar de maneira genérica o ritmo da música, análogo a como a Transformada de Fourrier representa timbre \myworries{explicar melhor}.
+Guaus e Herrera \cite{guaus2005rhythm}, trabalhando no contexto de classificação de gênero musical, definiram e implementaram uma "Transformada Rítmica". Essa transformada serve para representar de maneira genérica o ritmo da música, análogo a como a Transformada de Fourrier representa timbre. Enquanto a de Fourrier descreve sinais complicados como uma soma ponderada de senoides, a Rítmica descreve o sinal como soma da periodicidade de picos de energia.
 
 
 \section{Tecnologias Existentes}
@@ -223,7 +223,7 @@ MusicXML \cite{good2001musicxml} é um formato de arquivo que se propõe a ser o
 \begin{itemize}
     \item Andamento: O pulso regular, medido em batidas por minuto, que guia a música.
     \item Ritmo: Como os toques estão organizados dentro do andamento.
-    \item \myworries{mir}
+    \item \mir: Extrair, de uma música, suas informações, seja de baixo nível (andamento, notas etc.) ou de alto nível (instrumentos usados, emoção etc.).
 \end{itemize}
 
 
@@ -235,7 +235,7 @@ Para cada uma dessas etapas, estudamos tecnologias que já foram usadas em outro
 
 Queremos atender a qualquer usuário com um pandeiro, microfone e editor de partituras. Uma interface gráfica não está prevista no projeto mas a partitura resultante do sistema deverá estar em algum formato editável por programas disponíveis no mercado. Essa facilidade de edição é vital para que os usuários validem o resultado do sistema e corrijam quaisquer equívocos na transcrição.
 
-\myworries{detalhar melhor a necessidade}Durante a pesquisa, determinamos que precisaremos constuir um conjunto de dados não rotulado de toques do pandeiro. Esse conjunto será usado por algoritmos de agrupamento para encontrar grupos de toques semelhantes.
+Durante a pesquisa, por termos decidimos usar algoritmos de agrupamento para a classificação dos toques de pandeiro, determinamos que precisaremos constuir um conjunto de dados não rotulado desses toques possíveis. Esses algoritmos foram escolhidos por aprenderem de maneira não supervisionada, facilitando a criação do conjunto de treinamento pois não precisaremos anotá-lo.
 
 \section{O Sistema}
 \subsection{Particularidades do Pandeiro Brasileiro}
@@ -263,7 +263,7 @@ Essentia tem uma implementação da Rhythm Transform, entretanto, no manual do a
 \end{quote}
 
 \subsection{A partitura resultante}
-Por ser um instrumento não-harmônico, a notação típica em pentagramas (cinco linhas), onde a posição da nota reflete a frequência do som emitido pelo instrumento, não é útil. Seuguirei então o trabalho de Magalhães \myworries{que trabalho é esse?} \cite{magalhaes2018tecnica}, que definiu uma \CA (ou \ca) para o pandeiro brasileiro, ou seja, um indicador do que cada linha e espaço significa. Isso reduz a quantidade de linhas necessárias de cinco (pentagrama) para duas (bigramas). Então usaremos a mesma \ca que Magalhães e as 9 notas do pandeiro como definido por ela.
+Por ser um instrumento não-harmônico, a notação típica em pentagramas (cinco linhas), onde a posição da nota reflete a frequência do som emitido pelo instrumento, não é útil. Seguirei então o trabalho de Magalhães \cite{magalhaes2018tecnica} em seu livro "Técnicas e Levadas para Pandeiro Brasileiro", que definiu uma \CA (ou \ca) para o pandeiro brasileiro, ou seja, um indicador do que cada linha e espaço significa. Isso reduz a quantidade de linhas necessárias de cinco (pentagrama) para duas (bigramas). Então usaremos a mesma \ca que Magalhães e as 9 notas do pandeiro como definido por ela.
 
 A partitura será representada em formato MusicXML, que será gerado através da biblioteca music21, que disponibiliza uma função específicamente para a essa tarefa.
 
